@@ -36,26 +36,26 @@ Here is some command that Pomodoro bot support
 **!pmdr_help**  
 　 → Send Pomodoro command help message to calling channel  
 ex) !pmdr_help  
-![help_sc](./readme_img_help.png)
+![help_sc](/images/readme_img_help.png)
 
 ### 2. Start Pomodoro timer
 
 **!pmdr_start** `Work minute` `Break minute`  
 　 → Start pomodoro timer. Start `Break minute` timer after `Work minute` timer. It also notify each time done via send message with mention to calling channel  
-ex) !pmdr_start 25 5  
-![start_sc](./readme_img_start.png)
+ex) !pmdr_start 25 5   
+![start_sc](/images/readme_img_start.png)
 
-※ You can't use this command while pomodoro timer already working
-![already_sc](./readme_img_already.png)
+※ You can't use this command while pomodoro timer already working   
+![already_sc](/images/readme_img_already.png)
 
-Notify via message with mention
-![work_done_sc](./readme_img_work_done.png)  
+Notify via message with mention   
+![work_done_sc](/images/readme_img_work_done.png)  
 ...  
-![break_done_sc](./readme_img_already.png)
+![break_done_sc](/images/readme_img_already.png)
 
 ### 3. Stop Pomodoro timer
 
 **!pmdr_stop**  
 　 → Stop pomodoro timer  
 ex) !pmdr_stop  
-![stop_sc](./readme_img_stop.png)
+![stop_sc](/images/readme_img_stop.png)
