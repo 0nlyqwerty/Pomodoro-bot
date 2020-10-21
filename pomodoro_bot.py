@@ -64,7 +64,8 @@ async def pmdr_start(ctx, work_time: int, break_time: int):
         await ctx.channel.send(
             f"{ctx.author.mention}```css\n[🔥Break time end!] Let's work :)```")
         work_expire_time = get_expire_time(work_time)
-        sched.add_job(work_schedule, 'date', run_date=work_expire_time, args=[work_time, break_time])
+        sched.add_job(work_schedule, 'date', run_date=work_expire_time, args=[
+                      work_time, break_time], misfire_grace_time=300)
         pass
 
     async def work_schedule(work_time, break_time):
@@ -72,11 +73,13 @@ async def pmdr_start(ctx, work_time: int, break_time: int):
         await ctx.channel.send(
             f"{ctx.author.mention}```css\n[🏁Work time end!] Let's break :)```")
         break_expire_time = get_expire_time(break_time)
-        sched.add_job(break_schedule, 'date', run_date=break_expire_time, args=[work_time, break_time])
+        sched.add_job(break_schedule, 'date', run_date=break_expire_time,
+                      args=[work_time, break_time], misfire_grace_time=300)
         pass
 
     work_expire_time = get_expire_time(work_time)
-    sched.add_job(work_schedule, 'date', run_date=work_expire_time, args=[work_time, break_time])
+    sched.add_job(work_schedule, 'date', run_date=work_expire_time,
+                  args=[work_time, break_time], misfire_grace_time=300)
 
     await ctx.channel.send(
         f"```css\n[Work {work_time}min, Break {break_time}min] Pomodoro Timer START.\n - stop command : !pmdr_stop```")
