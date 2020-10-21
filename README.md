@@ -51,7 +51,7 @@ ex) !pmdr_start 25 5
 Notify via message with mention   
 ![work_done_sc](/images/readme_img_work_done.png)  
 ...  
-![break_done_sc](/images/readme_img_already.png)
+![break_done_sc](/images/readme_img_break_done.png)
 
 ### 3. Stop Pomodoro timer
 
