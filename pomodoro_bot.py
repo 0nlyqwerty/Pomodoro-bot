@@ -93,7 +93,7 @@ async def pmdr_stop(ctx):
     """
     sched.remove_all_jobs()
     await ctx.channel.send(
-        f"```css\nPomodoro Timer START.\n - start command : !pmdr_start [work_min] [break_min]```")
+        f"```css\nPomodoro Timer STOP.\n - start command : !pmdr_start [work_min] [break_min]```")
 
 
 def get_expire_time(minutes: int):
