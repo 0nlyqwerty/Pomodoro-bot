@@ -17,9 +17,12 @@ t = open(CURRENT_DIR_PATH + "token.txt", "r", encoding="utf-8")
 TOKEN = t.read().split()[0]
 
 version = '1.0.0'
+intents = discord.Intents.default()
+intents.members = True
+intents.presences = True
 game = discord.Game(f"Pomodoro Bot {version}")
 bot = commands.Bot(command_prefix='!', status=discord.Status.online,
-                   activity=game, help_command=None)
+                   activity=game, help_command=None, intents=intents)
 
 sched = AsyncIOScheduler()
 
