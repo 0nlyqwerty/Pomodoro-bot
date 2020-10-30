@@ -4,6 +4,7 @@ import os
 import platform
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 import datetime
+from src.utils import get_expire_time
 
 # Get token from ./token.txt
 CURRENT_DIR_PATH = os.path.dirname(__file__)
@@ -97,12 +98,6 @@ async def stop_pomodoro_timer(ctx):
     sched.remove_all_jobs()
     await ctx.channel.send(
         f"```css\nPomodoro Timer STOP.\n - start command : !pmdr_start [work_min] [break_min]```")
-
-
-def get_expire_time(minutes: int):
-    now = datetime.datetime.now()
-    expire_time = now + datetime.timedelta(minutes=minutes)
-    return expire_time
 
 
 bot.run(TOKEN)
