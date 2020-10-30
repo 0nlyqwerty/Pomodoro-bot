@@ -35,8 +35,8 @@ async def on_ready():
     sched.start()
 
 
-@bot.command()
-async def pmdr_help(ctx):
+@bot.command(name='pmdr_help')
+async def send_help_message(ctx):
     """ Pomodoro bot help command
     Action:
         Send Pomodoro command help message
@@ -47,8 +47,8 @@ async def pmdr_help(ctx):
         f"5\n -  Stop command : !pmdr_stop```")
 
 
-@bot.command()
-async def pmdr_start(ctx, work_time: int, break_time: int):
+@bot.command(name='pmdr_start')
+async def start_pomodoro_timer(ctx, work_time: int, break_time: int):
     """ Start pomodoro timer
     Action:
         Start break_time timer after work_time timer
@@ -88,8 +88,8 @@ async def pmdr_start(ctx, work_time: int, break_time: int):
         f"```css\n[Work {work_time}min, Break {break_time}min] Pomodoro Timer START.\n - stop command : !pmdr_stop```")
 
 
-@bot.command()
-async def pmdr_stop(ctx):
+@bot.command(name='pmdr_stop')
+async def stop_pomodoro_timer(ctx):
     """ Stop pomodoro timer
     Action:
         Stop pomodoro timer
