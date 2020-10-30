@@ -1,4 +1,4 @@
-from datetime import datetime
+import datetime
 
 
 def get_expire_time(minutes: int) -> datetime.datetime:
@@ -6,7 +6,7 @@ def get_expire_time(minutes: int) -> datetime.datetime:
     args
         minutes: int
     return
-        expire_time: datetime
+        expire_time: datetime.datetime
     """
     now = datetime.datetime.now()
     expire_time = now + datetime.timedelta(minutes=minutes)
